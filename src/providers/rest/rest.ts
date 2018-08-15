@@ -14,32 +14,33 @@ export class RestProvider {
   constructor(public http: HttpClient) {
     console.log('Hello RestProvider Provider');
   }
+  
   rest =  "http://192.168.254.64/rest";
+  
   header = new Headers({
     'Content-Type':'application/json'
   });
+
   private _getHeaders():HttpHeaders {
     let header = new HttpHeaders().set('Content-Type', 'application/json');
-
-
     return header;
  }
-  get(url,params,callback)
-  {
-    this.http.get(this.rest+url,params)
-    .map(res => console.log(res))
-    .subscribe(data=>{
-      callback(data)
-    })
+
+  get(url,params,callback){
+      this.http.get(this.rest+url,params)
+      .map(res => console.log(res))
+      .subscribe(data=>{
+        callback(data)
+      })
   }
-  post(url,params,callback)
-  {
-    let headers = new HttpHeaders().set('Content-Type', 'application/json');
-    headers = headers.set('Accept', 'text/javascript');
-    this.http.post(this.rest+url,params,{headers})
-    .map(res => console.log(res))
-    .subscribe(data=>{
-      callback(data)
-    })
+  
+  post(url,params,callback){
+      let headers = new HttpHeaders().set('Content-Type', 'application/json');
+      headers = headers.set('Accept', 'text/javascript');
+      this.http.post(this.rest+url,params,{headers})
+      .map(res => console.log(res))
+      .subscribe(data=>{
+        callback(data)
+      })
   }
 }

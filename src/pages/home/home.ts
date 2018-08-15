@@ -15,6 +15,8 @@ export class HomePage {
   ionViewDidEnter()
 {
   let url;
+  console.log(this.platform);
+  
   if(!this.platform.is('mobileweb'))
   {
     this.platform.ready().then((readySource) => {
