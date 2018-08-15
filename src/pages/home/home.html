@@ -1,14 +1,34 @@
-<ion-header>
+
+<ion-header class="roboto">
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
+    <ion-title text-center>
+      MoneyPag SMS Reader
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding class="roboto">
+  <ion-card class="card-sms">
+  	<ion-card-header text-center>
+  		SMS's enviados
+  	</ion-card-header>
+  	<ion-card-content>
+  		<ion-item>
+  			<ion-icon name="checkmark-circle" item-start class="item-enviado"></ion-icon>
+  			<ion-badge item-end>300</ion-badge>
+  		</ion-item>
+  	</ion-card-content>
+  </ion-card>
+  <ion-card class="card-sms">
+  	<ion-card-header text-center>
+  		SMS's não enviados
+  	</ion-card-header>
+  	<ion-card-content>
+  		<ion-item>
+  			<ion-icon name="close-circle" item-start class="item-nao-enviado"></ion-icon>
+  			<ion-badge item-end>40</ion-badge>
+  		</ion-item>
+  	</ion-card-content>
+  </ion-card>
+  <button ion-button color="dark">Atualizar</button>
 </ion-content>

@@ -14,3 +14,49 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+
+.roboto{
+	font-family: 'Roboto', sans-serif;
+}
+
+.toolbar-background-md {
+	background-color: #ffad13; 
+}
+
+.toolbar-title-md {
+	color: #fff;
+	text-shadow: 2px 1px rgba(0,0,0,.3);
+	font-weight: bold;
+}
+
+.card-sms {
+	border: 1px solid rgba(0,0,0,.3);
+}
+
+.card-header-md {
+	margin-bottom: -5px;
+	font-weight: bold;
+}
+
+.item-enviado {
+	font-size: 2.5em;
+	color: #28bb6f !important;
+}
+
+.item-nao-enviado {
+	font-size: 2.5em;
+	color: #ff3d43  !important;
+}
+
+.badge-md {
+	background-color: #fff;
+	border: 1px solid #333;
+	color: #333;
+	padding: 5px 10px;
+}
+
+.button-md {
+	left: 33%;
+	top: 50px;
+}
